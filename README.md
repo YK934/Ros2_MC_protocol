@@ -49,4 +49,4 @@ ros2 run cpp_udp udp_hex_subscriber
 [INFO] [1729481370.416026962] [udp_hex_subscriber]: 0
 [INFO] [1729481370.416035767] [udp_hex_subscriber]: 0
 ```
-*An inclimental rotary encoder is connected to FX5 PLC and 728331980 is count from it. 
+*An inclimental rotary encoder was connected to my FX5 PLC and 728331980 was count from it. 
