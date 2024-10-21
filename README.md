@@ -7,6 +7,12 @@ Read D18~D33 from FX5 PLC then put on topic,
 ROS2 三菱FX5 PLCからMCプロトコルを使ってDデバイスをD18から１６点読込。UDP通信。<br>8点の32bit uint valueとして表示。
 
 ## Install
+Set PLC IP address and port address in src/send_dup.cpp
+```
+#define F7_ADDR "__192.168.3.60__"
+#define F7_PORT __45242__
+```
+
 ```
 cd ros2_ws/src
 git clone
