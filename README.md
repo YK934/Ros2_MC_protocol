@@ -15,7 +15,7 @@ colcon build
 ```
 
 ## Run
-On first terminal, run publisher.
+On first terminal, run a publisher.
 ```
 cd ros2_ws/
 source install/setup.sh
@@ -32,7 +32,7 @@ ros2 run cpp_udp udp_send
 
 
 
-On second terminal run subscriber.
+On second terminal run a subscriber.
 ```
 cd ros2_ws/
 source install/setup.sh
