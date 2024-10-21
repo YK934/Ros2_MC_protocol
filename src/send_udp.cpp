@@ -24,8 +24,6 @@ class SendUDP : public rclcpp::Node
 
         // Create the publisher for the received data
         udp_pub_ = this->create_publisher<std_msgs::msg::ByteMultiArray>("udp_received_data", 10);
-
-        //タイマーで時間ごとにコールバックされる関数を設定
         timer_ = this->create_wall_timer(20ms, std::bind(&SendUDP::timer_callback, this));
     }
 
@@ -44,9 +42,7 @@ class SendUDP : public rclcpp::Node
 	};
     
     void timer_callback(){
-        //送信処理(ros2_udp.cppで定義)
         f7_udp.send_packet(packet, sizeof(uint8_t)*PACKET_SIZE);
-        //送信したデータを表示
         //RCLCPP_INFO(this->get_logger(),"send: %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x",packet[0],packet[1],packet[2],packet[3],packet[4],packet[5],packet[6],packet[7],packet[8],packet[9],packet[10],packet[11],packet[12],packet[13],packet[14],packet[15],packet[16],packet[17],packet[18],packet[19],packet[20],packet[21]);
 
         // Receive the UDP response

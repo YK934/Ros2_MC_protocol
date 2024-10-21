@@ -65,24 +65,12 @@ int Ros2UDP::udp_recv(uint8_t *buf, uint8_t size, int timeout_sec) {
             //std::cout << "Received " << recv_len << " bytes from " << inet_ntoa(sender_addr.sin_addr) << std::endl;
         }
 
-        //std::cout << "Sender address: " << inet_ntoa(sender_addr.sin_addr) << std::endl;
-        //std::cout << "Sender port: " << ntohs(sender_addr.sin_port) << std::endl;
-
-        // std::cout << "Raw data received: ";
-        // for (int i = 0; i < recv_len; i++) {
-        //     std::cout << std::hex << static_cast<int>(buf[i]) << " ";
-        // }
-        //std::cout << std::dec << std::endl; // Switch back to decimal for future logs
-
         return recv_len;
     }
 }
 
-
-
 //Create packet
 //size2: number of main arguments
-//int size = request(send_buffer, BUFSIZE, argv, argc); in main.cpp 
 int request(unsigned char *buffer,  const std::vector<uint8_t>& argv ,int size2) {
     
     std::vector<unsigned char> sub_h = {

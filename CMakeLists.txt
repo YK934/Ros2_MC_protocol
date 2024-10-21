@@ -20,11 +20,6 @@ src/ros2_udp.cpp
 include/ros2_udp.hpp
 )
 
-# set(receive_sources
-# src/receive_udp.cpp
-# src/ros2_udp.cpp
-# include/ros2_udp.hpp)
-
 add_executable(udp_send ${send_sources})
 target_include_directories(udp_send PRIVATE ./include)
 ament_target_dependencies(udp_send rclcpp std_msgs)
